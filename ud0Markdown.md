@@ -3,15 +3,15 @@
 ## 0. Crear un Índice con los contenidos. 
 
 ## Índice
-- [1. Introducción](#1.-Introducción)
+- [1. Introducción](#1-introducción)
 
-- [2. Comparativa de Modelos](#2.-Comparativa-de-Modelos)
+- [2. Comparativa de Modelos](#2-comparativa-de-modelos)
 
-- [3. Ejemplo de Código en Python](#3.-Ejemplo-de-Código-en-Python)
+- [3. Ejemplo de Código en Python](#3-ejemplo-de-código-en-python)
 
-- [4. Pasos para Entrenar un Modelo](#4.-Pasos-para-Entrenar-un-Modelo)
+- [4. Pasos para Entrenar un Modelo](#4-pasos-para-entrenar-un-modelo)
 
-- [5. Recursos Adicionales](#5.-Recursos-Adicionales)
+- [5. Recursos Adicionales](#5-recursos-adicionales)
 
 ## 1. Introducción
 
