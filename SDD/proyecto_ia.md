@@ -33,6 +33,8 @@ Los servicios a desplegar son los siguientes:
 
 
 ## 3. Arquitectura de red y datos 
+
+### 3.1 Redes Docker
 Red principal que se va a llamar "red-ia" a la que van a pertenecer todos los contenedores para poder comunicarse entre sí. Red modo "bridge" y crear un sistema de naming (DNS) local del modo siguiente: 
 
 | Servicio | Nombre de contenedor | URL |
@@ -46,9 +48,9 @@ Red principal que se va a llamar "red-ia" a la que van a pertenecer todos los co
 | **SearXNG** | searxng | http://searxng:8080 | 
 | **RAG** | rag | ***Integrado con otros servicios*** | 
 
-### 3.1 Redes Docker
 
 ### 3.2 Volúmenes de datos 
+Consiste en "mapear" un 
 
 ## 4. Requisitos de sistema y hardware 
 
