@@ -29,9 +29,6 @@ Los servicios a desplegar son los siguientes:
 | **SearXNG** | searxng | 8080 | 8080 | Metabuscador privado para realizar búsquedas en Internet | GPU driver |
 | **RAG** | rag | 11434 | 11434 | Técnica para aumentar la capacidad de un modelo de lenguaje LLM con información externa privada | Ollama, documentación externa |
 
-
-
-
 ## 3. Arquitectura de red y datos 
 
 ### 3.1 Redes Docker
@@ -48,7 +45,6 @@ Red principal que se va a llamar "red-ia" a la que van a pertenecer todos los co
 | **SearXNG** | searxng | http://searxng:8080 | 
 | **RAG** | rag | ***Integrado con otros servicios*** | 
 
-
 ### 3.2 Volúmenes de datos 
 Consiste en "mapear" un sistema de ficheros dentro de cada contenedor a la máquina física que los contiene.
 | Nombre volumen | Direccionamiento | Descripción |
@@ -64,7 +60,7 @@ Consiste en "mapear" un sistema de ficheros dentro de cada contenedor a la máqu
 
 ## 4. Requisitos de sistema y hardware 
 1. **SO:** Ubuntu Server 24.04 o 26.04.
-2. **GPU:** Tarjeta gráfica NVIDIA, algunos ordenadores con el modelo 3050, 4060.
+2. **GPU:** Tarjeta gráfica NVIDIA, algunos ordenadores con el modelo 3050, 4060. (4060 en mi caso por el ordenador del aula)
 3. **Drivers:** Driver NVIDIA CUDA o nvidia-drivers oficiales.
 4. **Docker:** Sistema de contenedores para cada servicio, docker compose, y docker.
 
@@ -76,11 +72,12 @@ Consiste en "mapear" un sistema de ficheros dentro de cada contenedor a la máqu
 > 2. **Estructura del proyecto:** Árbol detallado de directorios para el stack que vamos a montar `$HOME/proyecto`
 > 3. **Ficheros de configuración:** Un `docker-<servicio>.yml` por cada uno de los servicios que vamos a montar donde <servicio> se sustituye por el nombre del contenedor.
 > 4. **Fichero de entorno:** Fichero `.env` con todas las variables del entorno de todos los servicios.
-
-
+> 5. **Despliegue y verificación:** Comandos relacionados con el arranque de servicios (`docker compose up -d`), comprobación de logs, acceso de URL de servicio, uso de la GPU (`nvidia-smi`).
+> 6. **Mantenimiento y actualización:** Comandos de backups, de actualización de servicios, resolución de errores comunes (permisos)
+> 7. **Guía interna de integración interna:** Donde se detalla como conectar de manera exacta los servicios que corren en los dockers, por ejemplo, Ollama con Openwebui, Searxng con Opencode,...
 
 ## 6. Criterios de aceptación 
-
-
-
-
+1. Los archivos de configuración `docker_<servicio>.yml` deben ser totalmente funcionales y sin errores sintácticos.
+2. Todos los contenedore deben funcionar correctamente con las librerias de NVIDIA (CUDA), utilizando principalmente GPU.
+3. No pueden existir colisiones entre puertos de contenedores.
+4. Las explicaciones del manual deben ser especificadas paso a paso para un administrador de sistemas novato. 
